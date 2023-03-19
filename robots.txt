@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mryuhengwu.github.io/sitemap.xml
+Sitemap: https://yuhengwuallen.github.io/sitemap.xml
