@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html --><html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Deep Reinforcement Learning | Yuheng  Wu</title>
+    <meta name="author" content="Yuheng  Wu">
+    <meta name="description" content="course projects">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A4%9A&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://yuhengwuallen.github.io/projects/cs285drl/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    <script src="/assets/js/distillpub/overrides.js"></script>
+    
+  </head>
+
+  <body>
+<d-front-matter>
+    <script async type="text/json">{
+      "title": "Deep Reinforcement Learning",
+      "description": "course projects",
+      "published": "March 1, 2022",
+      "authors": [
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Yuheng </span>Wu</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/course/">course</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/link/">link</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/repositories/">repositories</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">cv</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/repositories/">repos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/link/">links</a>
+                </div>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1>Deep Reinforcement Learning</h1>
+        <p>course projects</p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        <d-contents>
+          <nav class="l-text figcaption">
+          <h3>Contents</h3>
+            <div><a href="#projects">projects</a></div>
+            <div><a href="#project1-notes">project1 notes</a></div>
+            <div><a href="#project2-notes">project2 notes</a></div>
+            <div><a href="#actor-critic">Actor-Critic</a></div>
+            
+          </nav>
+        </d-contents>
+
+        <p>link: <a href="https://rail.eecs.berkeley.edu/deeprlcourse/" rel="external nofollow noopener" target="_blank">instructions</a></p>
+
+<h1 id="projects">projects</h1>
+
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>behaviour cloning</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>policy gradient</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>Actor critic</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled checked>q_learning</li>
+</ul>
+
+<h1 id="project1-notes">project1 notes</h1>
+
+<h2 id="readings">readings</h2>
+
+<p><a href="https://smartlabai.medium.com/a-brief-overview-of-imitation-learning-8a8a75c44a9c" rel="external nofollow noopener" target="_blank"><code class="language-plaintext highlighter-rouge">intro to imitation learning and IRL</code></a>
+<a href="https://zhuanlan.zhihu.com/p/354787700" rel="external nofollow noopener" target="_blank"><code class="language-plaintext highlighter-rouge">notes from zhihu</code></a></p>
+
+<h2 id="实现思路">实现思路</h2>
+
+<p>实现思路就是按照Dagger算法的四个步骤，需要注意的是training过程中一直使用的是collect policy</p>
+
+<blockquote>
+  <p>使用collect policy生成一组sequence<br>
+用expert policy对这次收集到的sequence做relabel，就是重新为每一步的state附上新的action<br>
+然后将这段sequence加入到replace buffer中<br>
+最后随机从replace buffer中sample出training data</p>
+</blockquote>
+
+<p>在<code class="language-plaintext highlighter-rouge">rl_trainer.py</code> 106-124</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># collect trajectories, to be used for training
+</span>            <span class="n">training_returns</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">collect_training_trajectories</span><span class="p">(</span>
+                <span class="n">itr</span><span class="p">,</span>
+                <span class="n">initial_expertdata</span><span class="p">,</span>
+                <span class="n">collect_policy</span><span class="p">,</span>
+                <span class="n">self</span><span class="p">.</span><span class="n">params</span><span class="p">[</span><span class="s">'batch_size'</span><span class="p">]</span>
+            <span class="p">)</span>  <span class="c1"># HW1: implement this function below
+</span>            <span class="n">paths</span><span class="p">,</span> <span class="n">envsteps_this_batch</span><span class="p">,</span> <span class="n">train_video_paths</span> <span class="o">=</span> <span class="n">training_returns</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">total_envsteps</span> <span class="o">+=</span> <span class="n">envsteps_this_batch</span>
+
+            <span class="c1"># relabel the collected obs with actions from a provided expert policy
+</span>            <span class="k">if</span> <span class="n">relabel_with_expert</span> <span class="ow">and</span> <span class="n">itr</span><span class="o">&gt;=</span><span class="n">start_relabel_with_expert</span><span class="p">:</span>
+                <span class="n">paths</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">do_relabel_with_expert</span><span class="p">(</span><span class="n">expert_policy</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span>  <span class="c1"># HW1: implement this function below
+</span>
+            <span class="c1"># add collected data to replay buffer
+</span>            <span class="n">self</span><span class="p">.</span><span class="n">agent</span><span class="p">.</span><span class="nf">add_to_replay_buffer</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>
+
+            <span class="c1"># train agent (using sampled data from replay buffer)
+</span>            <span class="n">training_logs</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">train_agent</span><span class="p">()</span>  <span class="c1"># HW1: implement this function below
+</span></code></pre></div></div>
+
+<h2 id="结果分析">结果分析</h2>
+
+<h2 id="遇到的问题">遇到的问题</h2>
+
+<ol>
+  <li>
+    <p>starter code中<code class="language-plaintext highlighter-rouge">rl_trainer.py</code>文件中的<code class="language-plaintext highlighter-rouge">MAX_VIDEO_LEN</code>需要改为global
+ 当时遇到的问题是不论怎么设置，保存下来的humanoid的可视化的图都只有很短的前面一小部分的图。后来发现每次图片就保存了40帧，
+ 在<code class="language-plaintext highlighter-rouge">rl_trainer.py</code>中的<code class="language-plaintext highlighter-rouge">MAX_VIDEO_LEN</code>是一个全局变量，在进入__init__代码块之后我们需要修改这个全局变量，所以要加上global</p>
+  </li>
+  <li>
+    <p>配置mujuco环境</p>
+
+    <ol>
+      <li>
+        <p>roboti.us 使用http,不是https<br>
+<code class="language-plaintext highlighter-rouge">wget http://www.roboti.us/file/mjkey.txt</code></p>
+
+        <ol>
+          <li>
+            <p>| #include &lt;GL/osmesa.h&gt;
+<img src="/assets/img/src/cs285drl/q1.png" alt="q1"></p>
+
+            <blockquote>
+              <p><code class="language-plaintext highlighter-rouge">sudo apt install libosmesa6-dev</code></p>
+            </blockquote>
+          </li>
+          <li>
+            <p>error: [Errno 2] No such file or directory: ‘patchelf’: ‘patchelf’
+<img src="/assets/img/src/cs285drl/q2.png" alt="q2"></p>
+
+            <blockquote>
+              <p><code class="language-plaintext highlighter-rouge">sudo apt-get install patchelf</code></p>
+            </blockquote>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="收获">收获</h2>
+
+<p>学习replace buffer的代码实现</p>
+
+<h1 id="project2-notes">project2 notes</h1>
+
+<p>Policy Gradient</p>
+
+<blockquote>
+  <p>reference: <a href="https://campusai.github.io/lectures/lecture5" rel="external nofollow noopener" target="_blank">campusAI Policy gradient</a></p>
+</blockquote>
+
+<h2 id="goal-of-rl">Goal of RL</h2>
+
+\[\mathop{argmax}\limits_{\theta}J(\theta)  \\
+J(\theta) = E_{\tau\sim p_{\theta}(\tau)}[r(\tau)] \\
+\nabla_\theta{J(\theta)} = E_{\tau\sim p_\theta(\tau)}[(\sum_t^T \nabla_\theta 
+log\pi_\theta(a_{it}|s_{it}))(\sum_t^T(r(s_t, a_t))] \\\]
+
+<p>after Monte Carlo</p>
+
+\[\nabla_\theta J(\theta) = \frac{1}{N}\sum_i^N[(\sum_t^T\nabla_\theta log\pi_\theta
+(a_{i,t}| s_{i,t}))(\sum_t^T{r(s_{i,t}, a_{i,t})})]\]
+
+<h2 id="reinforce">REINFORCE</h2>
+
+<ol>
+  <li>
+    <p>sample ${\tau^i}$ from 
+\(\pi_\theta(a_t|s_t)\) -&gt; directly run the policy</p>
+  </li>
+  <li>
+    <p>$\nabla_\theta J(\theta) = \sum_i^N[\sum_t^T\nabla_\theta log\pi_\theta
+(a_{i,t}| s_{i,t})r(\tau)]$</p>
+  </li>
+  <li>
+    <p>$\theta \leftarrow \theta + \alpha \nabla_\theta J(\theta)$</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>注意：</p>
+
+  <p>第2步中没有取平均，这是因为梯度是指代变化的方向，而变化的步长应该由learning rate来决定，所以在第3步中要乘\alpha ，而不是在第2步中取\frac{1}{N} 步长</p>
+
+  <p>第3步中是+，这是gradient ascent，需要使long-term reward最大，所以每一步应该是增加</p>
+</blockquote>
+
+<h2 id="interpretation-of-reinforce">Interpretation of REINFORCE</h2>
+
+<p>现在讨论REINFORCE step3：每次上升一小步就是在增大整个trajectory的概率，可以把\(r(\tau)\) 看作是sign，如果\(r(\tau)\) 是正/负的，就增加/减少整个trajectory的可能性。这样做会带来问题，下一部分解释。</p>
+
+<h2 id="issue">Issue</h2>
+
+<h3 id="1-causality">1. causality</h3>
+
+<p>我们改写一下gradient的形式</p>
+
+\[\nabla_\theta J(\theta) = E_{\tau\sim p_\theta(\tau)}[\sum_t^T(\nabla_\theta
+log \pi_\theta(a_t|s_t)\sum_t^Tr(s_t, a_t))]\]
+
+<table>
+  <tbody>
+    <tr>
+      <td>我们可以观察到 $$\nabla_\theta log\pi_\theta(a_t</td>
+      <td>s_t)$$ 乘上了整个trajectory的从第一步开始的reward之和，但是这就和我们的做出的假设不符合，我们是假设当前time-step不受之前time-step的reward的影响的，所以需要考虑causality。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>solution</strong></p>
+
+<p>using <code class="language-plaintext highlighter-rouge">reward to go</code> 使用 \(\hat{Q}_t = \sum_{t=t'}^T r(s_t, a_t)\) 代替，最后式子变成</p>
+
+\[\nabla_\theta J(\theta) = E_{\tau\sim p_\theta(\tau)}[\sum_t^T\nabla_\theta
+log \pi_\theta(a_t|s_t)\hat{Q}_t]\]
+
+<h3 id="baseline">baseline</h3>
+
+<blockquote>
+  <p>In the interpretation we said that the gradient steps increases the likelihood of trajectories with positive rewards and decreases the likelihood of those with negative rewards. Consider the case in which we have some trajectories with positive rewards, and some with negative rewards (in green in the figure). The action distribution is correctly pushed towards the trajectories with positive rewards. However, if we add an offset to the same rewards making them all positive without changing their scale (yellow in the figure), things change dramatically. Now, the gradient step is correctly pushing the action distribution towards the higher rewards, but it is also spreading it in the direction of the lower -but still positive- ones, since the gradient step is also increasing their likelihood.</p>
+</blockquote>
+
+<p><strong>solution</strong></p>
+
+<p>subtract any term b that does not depend on the trajectory $\tau$</p>
+
+\[\nabla_\theta J(\theta) = \sum_i^N[\sum_t^T\nabla_\theta log\pi_\theta
+(a_{i,t}| s_{i,t})(r(\tau) - b)] \\
+b = \frac{1}{N}\sum_t^N r(\tau^i)\]
+
+<h2 id="on-policy-to-off-policy">on-policy to off-policy</h2>
+
+<p>the Policy Gradient algorithm we talk above is on-policy which means we need generate new data samples after we use the previous data to update. Off-policy aims to reuse the past experience.</p>
+
+<p><strong>Importance sampling</strong></p>
+
+\[E_{x\sim p(x)}[f(x)] = E_{x\sim q(x)}[\frac{p(x)}{q(x)}f(x)]\]
+
+<p>引入到policy gradient中：</p>
+
+\[J(\theta') = E_{\tau \sim \pi_\theta(\tau)}[\frac{\pi_{\theta'}(\tau)}{\pi_\theta
+(\tau)}r(\tau)] \\
+\theta'\ is\ new\]
+
+<p>最后可以化简得到（具体过程可以参考slides）</p>
+
+\[\nabla_\theta' J(\theta') = E_{\tau \sim \pi_\theta}[\sum_{t=1}^T \nabla_{\theta'}
+log \pi_{\theta'}(a_t | s_t)(\prod_{t=1}^T \frac{\pi_{\theta'}(a_t | s_t)}
+{\pi_\theta(a_{t} | s_{t})})(\sum_{t=t'}^T r(s_{t}, a_{t})]\]
+
+<p>after using Monte Carlo:</p>
+
+<p><img src="/assets/img/src/cs285drl/off_policy_equation.png" alt="off-policy"></p>
+
+<h2 id="implement-of-pg">Implement of PG</h2>
+
+<h3 id="pg-with-automatic-differentiation">PG with automatic differentiation</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>using cross entropy or squared error to compute $log \pi_\theta(a_{i,t}</td>
+      <td>s_{i,t})$</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Given:
+# actions -(N*T) x Da tensor of actions
+# states -(N*T) x Ds tensor of states
+# q_values - (N*T) x 1 tensor of estimated state action values
+# Build the graph:
+</span><span class="n">logits</span> <span class="o">=</span> <span class="n">policy</span><span class="p">.</span><span class="nf">predictions </span><span class="p">(</span><span class="n">states</span><span class="p">)</span> <span class="c1"># This should return (N*T) x Da tensor of action logits
+</span><span class="n">negative_likelihoods</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="nf">softmax_cross_entropy_with_logits </span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">actions</span><span class="p">,</span> <span class="n">logits</span><span class="o">=</span><span class="n">logits</span><span class="p">)</span>
+<span class="n">weighted_negative_likelihoods</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">multiply</span><span class="p">(</span><span class="n">negative_likelihoods</span> <span class="p">,</span> <span class="n">q_values</span><span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reduce_mean</span><span class="p">(</span><span class="n">weighted_negative_likelihoods</span><span class="p">)</span>
+<span class="n">gradients</span> <span class="o">=</span> <span class="n">loss</span><span class="p">.</span><span class="nf">gradients </span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="n">gradient</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="actor-critic">Actor-Critic</h1>
+
+<h2 id="从policy-gradient到policy-evaluation">从policy gradient到policy evaluation</h2>
+
+\[\nabla_\theta J(\theta) \approx \frac{1}{N}\sum_i^N\sum_t^T
+\nabla_\theta log\pi_\theta(a_{i,t} | s_{i,t})(Q(s_{i,t}, a_{i,t}) - V(s_{i,t}))\]
+
+<p>理解Advantage function</p>
+
+\[A(s_{i,t}, a_{i,t}) = Q(s_{i,t}, a_{i,t}) - V(s_{i,t})\]
+
+<blockquote>
+  <p>当前状态下采取动作a，比该状态下分别采取所有动作的期望的奖励值 高多少</p>
+</blockquote>
+
+<p>实际中如何得到 $A(s_{i,t}, a_{i,t})$</p>
+
+\[Q(s_{t}, a_{t}) = r(s_t, a_t) + V(s_{t+1}) \\
+A(s_t, a_t) = r(s_t, a_t) + V(s_{t+1}) - V(s_t)\]
+
+<p>这样我们只需要fit $V(s_t)$</p>
+
+<p>为了fit $V(s_t)$ ,采用monte carlo</p>
+
+\[V(s_t) \approx \frac{1}{N}\sum_i^N\sum_{t'=t}^Tr(s_{t'}, a_{t'})\]
+
+<p>如此我们得到整个training 过程</p>
+
+<blockquote>
+  <p>training data: ${ (s_{i,t}; \sum_{t’=t}^T r(s_{i,t’}, a_{i, t’})}$ 使用的是monte carlo target</p>
+
+  <p>prediction: $\hat{V_\phi^\pi(s_i)}$</p>
+
+  <p>ideal target : $r(s_{i,t}, a_{i,t}) + \hat{V_\phi^\pi(s_{i, t+1})}$</p>
+</blockquote>
+
+<h2 id="policy-evaluation-到-online-actor-critic">policy evaluation 到 online Actor-critic</h2>
+
+<blockquote>
+  <ol>
+    <li>
+      <table>
+        <tbody>
+          <tr>
+            <td>sample ${ s_i, a_i}$ from $\pi_\theta(a</td>
+            <td>s)$</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>
+      <p>update $\hat{V_\phi^\pi(s)}$ using target $r + \gamma \hat{V_\phi^\pi(s’)}$</p>
+    </li>
+    <li>
+      <p>evaluate $A(s_t, a_t) = r(s_t, a_t) + \gamma V(s_{t+1}) - V(s_t)$</p>
+    </li>
+    <li>
+      <table>
+        <tbody>
+          <tr>
+            <td>$\nabla_\theta J(\theta) \approx \sum_i \nabla_\theta log\pi_\theta(a_i</td>
+            <td>s_i)\hat{A^\pi(s_i, a_i)}$</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>$\theta \leftarrow \theta + \alpha \nabla_\theta J(\theta)$</li>
+  </ol>
+
+  <p>$y_{i,t} \approx r(s_{i,t}, a_{i,t}) + \gamma \hat{V_\phi^\pi(s_{i, t+1})}$ 当$T\rightarrow \infty$时, 使用$V_\phi^\pi$去估计Q (Temporal Difference)</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>$\sum_i \nabla_\theta log\pi_\theta(a_i</td>
+        <td>s_i)$ 使用monte carlo近似 softmax_with_cross_entropy(actions, logits)</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="make-actor-critic-practical">make Actor-Critic practical</h2>
+<p><strong>trick 1:</strong> shared network design <br>
+<img src="/assets/img/src/cs285drl/hw2/shared_network_design.png" alt="shared_network_design"></p>
+
+<p><strong>trick 2:</strong> synchronized parallel actor-critic and asynchronized parallel actor-critic<br>
+<img src="/assets/img/src/cs285drl/hw2/spac_apac.png" alt="synchronized_actor_critic"></p>
+
+<p><strong>trick 3:</strong> off-policy actor-critic <br>
+如果直接在vanilla AC上使用experience会存在以下问题：<br>
+(1)<br>
+<img src="/assets/img/src/cs285drl/hw2/off1.png" alt="problem1"></p>
+
+<p>如果sample到的是old experience, the actions in these transitions were taken by older actors, when you use these older actors to get the action 
+and compute the target values. That’s not will give you the right target value, it will give some other actor not your latest actor.<br>
+所以解决办法是使用Q  <br>
+V我理解为given state s，then follow policy \(\pi\) , Q理解为given state s and take action a then follow policy \(\pi\) <br>
+计算Q值的时候，使用的action由最新的policy重新generate出来</p>
+<blockquote>
+  <p>已经开始引入Q learning的方法</p>
+</blockquote>
+
+<p>(2)<br>
+<img src="/assets/img/src/cs285drl/hw2/off2.png" alt="problem2"><br>
+\(a_i\) is not the action the latest policy will take so using the policy to generate the new action of state \(s_i\) and then compute</p>
+
+<p>(3) other tricks</p>
+<ol>
+  <li>using Q instead of Advantage Function</li>
+  <li>using more fancier approximation of Q in step 3</li>
+  <li>using <strong>reparameterization trick</strong> in step 4</li>
+</ol>
+
+<h2 id="control-variates">control variates</h2>
+<blockquote>
+  <p>综合actor-critic和vanilla policy gradient</p>
+</blockquote>
+
+<ol>
+  <li>Q-prop</li>
+  <li>
+<strong>n-step</strong><br>
+<img src="/assets/img/src/cs285drl/hw2/nstep.png" alt="nstep"><br>
+在smaller variance处使用monte carlo，在higher variance处使用Critic降低variance</li>
+  <li>
+<strong>GAE(generalized advantage estimate)</strong>
+    <blockquote>
+      <p>结合多个不同n的n-step(详见homework2实现)<br>
+计算中可以迭代计算</p>
+    </blockquote>
+  </li>
+</ol>
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+      <d-bibliography src="/assets/bibliography/"></d-bibliography>
+</div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Yuheng  Wu. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+      </div>
+    </footer>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  
+</body>
+</html>
