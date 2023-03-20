@@ -4,7 +4,7 @@ title: Deep Reinforcement Learning
 description: course projects 
 # img: 
 importance: 1
-category: project
+category: course project
 nav: true 
 toc: 
   - name: projects

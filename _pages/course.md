@@ -1,7 +1,7 @@
 ---
 layout: distill
 permalink: /course/
-title: course
+title: Course
 description: Course schedule and summary
 nav: true
 nav_order: 3

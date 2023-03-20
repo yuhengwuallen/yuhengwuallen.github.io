@@ -1,6 +1,6 @@
 ---
 layout: page
-title: link
+title: Link
 permalink: /link/
 # date: 2021-07-04 17:39:00
 description: frequently-used links

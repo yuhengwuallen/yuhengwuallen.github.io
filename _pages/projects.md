@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Course Projects
+description: 
 nav: true
 nav_order: 5
-display_categories: [project, ]
+display_categories: [course project, ]
 horizontal: false
 ---
 

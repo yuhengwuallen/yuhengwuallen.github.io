@@ -4,7 +4,7 @@ title: Carla-RL
 description: final projects 
 # img: 
 importance: 3
-category: project
+category: course project
 nav: true 
 date: 2022-03-01
 toc: 
