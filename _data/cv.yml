@@ -11,22 +11,13 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
+    - title: Bachelor in Cyber Security & Computer Science
       institution: Shanghai University, China
       year: 2019-2023(expected)
       description:
-        - major in Computer Science & Cyber Security
+        - study at School of Computer Engineering and Science, SHU
         - ranked 1st/27 with GPA 3.81/4.0
-        # - title: Description 3.
-        #   contents:
-        #     - Sub-description 1.
-        #     - Sub-description 2.
-    # - title: Federal teaching diploma
-    #   institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-    #   year: 1900
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
+
 
 - title: Research Experience
   type: time_table
@@ -70,10 +61,7 @@
     - title: Deep Reinforcement Learing
       items: 
         - deep reinforcement learning for system control and optimization
-    # - title: Topic 2.
-    #   items:
-    #     - Description 1.
-    #     - Description 2.
+
 
 # - title: Other Interests
 #   type: list
