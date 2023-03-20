@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: Course Projects
 nav: true
-nav_order: 1
+nav_order: 5
 display_categories: [project, ]
 horizontal: false
 ---

@@ -4,7 +4,8 @@ permalink: /course/
 title: course
 description: Course schedule and summary
 nav: true
-nav_order: 2
+nav_order: 3
+published: true
 toc:
   - name: MIT18.01 Single Variable Calculus
   - name: MIT18.06 Linear Algebra
