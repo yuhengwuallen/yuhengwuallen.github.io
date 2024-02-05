@@ -1,6 +1,6 @@
 ---
 title: "Adaptive Video Streaming System"
-date: 2023-11-29
+date: 2024-02-05
 # weight: 1
 # aliases: ["/first"]
 tags: ["video streaming", "edge computing"]
