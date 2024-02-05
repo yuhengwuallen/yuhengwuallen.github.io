@@ -1,0 +1,61 @@
+{{- /* Head custom content area start */ -}} {{- /* Insert any custom code
+(web-analytics, resources, etc.) - it will appear in the <head></head> section
+of every page. */ -}} {{- /* Can be overwritten by partial with the same name in
+the global layouts. */ -}} {{- /* Head custom content area end */ -}} {{ if or
+.Params.math .Site.Params.math }}
+<!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"
+></script> -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"],
+      ],
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"],
+      ],
+      processEscapes: true,
+      processEnvironments: true,
+    },
+    options: {
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+    },
+  };
+
+  window.addEventListener("load", (event) => {
+    document.querySelectorAll("mjx-container").forEach(function (x) {
+      x.parentElement.classList += "has-jax";
+    });
+  });
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  type="text/javascript"
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+{{ end }}
