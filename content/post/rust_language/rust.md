@@ -3,7 +3,7 @@ title: "the way to master rust"
 date: 2024-03-13
 # weight: 1
 # aliases: ["/first"]
-tags: ["rust"]
+tags: ["rust", "course"]
 author: "Yuheng"
 showtoc: true
 tocopen: true
@@ -88,3 +88,20 @@ Currently(1.76.0), the compiler can auto analyze the lifetime based on three rul
 1. the compiler assigns a lifetime parameter to each parameter that’s a reference. `fn foo<'a, 'b>(x: &'a i32, y: &'b i32)`
 2. if there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters. `fn foo<'a>(x: &'a i32) -> &'a i32`
 3. if there are multiple input lifetime parameters, but one of them is `&self` or `&mut self` because this is a method, the lifetime of `self` is assigned to all output lifetime parameters
+
+
+### Interior Mutability
+
+Interior mutability in Rust is a design pattern that allows you to modify data even when there are immutable references to that data, thus bypassing Rust's usual borrowing rules that typically disallow modifying data through an immutable reference. This is achieved by using certain types provided by the Rust standard library, which use unsafe code inside to safely encapsulate and manage mutations. The primary purpose of this pattern is to enable the modification of data in a controlled manner without violating the safety guarantees of the Rust language.
+
+Read this link thoroughly: [https://doc.rust-lang.org/std/cell/index.html](https://doc.rust-lang.org/std/cell/index.html)
+
+#### `Cell<T>`
+
+
+#### `RefCell<T>`
+
+
+#### `Mutex<T>`
+
+#### `RwLock<T>`
