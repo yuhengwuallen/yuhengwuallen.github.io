@@ -28,19 +28,19 @@ Before introducing pipeline, we first establish how we measure the performance o
 The _CPU Time_ which is also called as _CPU execution time_ represents the time the CPU spends on one task, exclusive of I/O time. 
 
 $$
-\begin{align*}
+\begin{align}
 CPU\ time &= num\ clock\ cycles\ for\ a\ program * clock\ cycle\ time \\
 &= \frac{num\ CPU\ clock\ cycles\ for\ a\ program}{clock\ rate}
-\end{align*}
+\end{align}
 $$
 
 Alternatively, it can be understood as the product of instructions executed and the average clock cycle per instruction(**CPI**):
 
 $$
-\begin{align*}
+\begin{align}
     CPU\ time &= Instruction\_ count * CPI * clock\_ cycle \\
     &= \frac{Instruction\_ count * CPI}{clock\_ rate}
-\end{align*}
+\end{align}
 $$
 
 ### Non-pipelined
