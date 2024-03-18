@@ -23,6 +23,13 @@ ShowShareButtons: false
 
 I use rust version 1.76.0 (07dca489a 2024-02-04).
 
+useful links:
+
+1. [the book](https://doc.rust-lang.org/book/)
+2. [rust by examples](https://doc.rust-lang.org/rust-by-example/)
+3. [Rustonomicon](https://doc.rust-lang.org/nomicon/intro.html)
+4. [rust RFC](https://rust-lang.github.io/rfcs/)
+
 ### Ownership
 The rules of `ownership`:
 
@@ -94,13 +101,34 @@ Currently(1.76.0), the compiler can auto analyze the lifetime based on three rul
 
 Interior mutability in Rust is a design pattern that allows you to modify data even when there are immutable references to that data, thus bypassing Rust's usual borrowing rules that typically disallow modifying data through an immutable reference. This is achieved by using certain types provided by the Rust standard library, which use unsafe code inside to safely encapsulate and manage mutations. The primary purpose of this pattern is to enable the modification of data in a controlled manner without violating the safety guarantees of the Rust language.
 
-Read this link thoroughly: [https://doc.rust-lang.org/std/cell/index.html](https://doc.rust-lang.org/std/cell/index.html)
+Read this link thoroughly: [https://doc.rust-lang.org/std/cell/index.html](https://doc.rust-lang.org/std/cell/index.html). For fully understanding, please read this doc carefully. The contents as follows are mainly directly cv from there.
 
-#### `Cell<T>`
+#### Single Thread version
+reference to: [https://doc.rust-lang.org/std/cell/](https://doc.rust-lang.org/std/cell/)
+##### `Cell<T>`
+`Cell` implements the interior mutability by moving values in and out of the cell. And is usually for simple types where copying or moving values isn't too resource intensive.
 
+##### `RefCell<T>`
+`RefCell` uses Rust's lifetimes to implement "dynamic borrowing" [figure out how it achieves this goal in the source code later], a process whereby one can claim temporary, exclusive, mutable access to the inner value. This _borrows_ are checked at _run time_ and is different from native reference types which are tracked at _compile time_.   
+An immutable reference to a RefCell’s inner value (&T) can be obtained with borrow, and a mutable borrow (&mut T) can be obtained with borrow_mut. When these functions are called, they first verify that Rust’s borrow rules will be satisfied: any number of immutable borrows are allowed or a single mutable borrow is allowed, but never both. If a borrow is attempted that would violate these rules, the thread will panic.
 
-#### `RefCell<T>`
+For types that implement `Copy`, the get method retrieves the current interior value by duplicating it.
+For types that implement `Default`, the take method replaces the current interior value with `Default::default()` and returns the replaced value.   
 
+All types have:    
+`replace`: replaces the current interior value and returns the replaced value.
+`into_inner`: this method consumes the `Cell<T>` and returns the interior value.
+`set`: this method replaces the interior value, dropping the replaced value.
+
+##### `OnceCell<T>`
+`OnceCell<T>` is somewhat of a hybrid of Cell and RefCell that works for values that typically only need to be set once. This means that a reference &T can be obtained without moving or copying the inner value (unlike Cell) but also without runtime checks (unlike RefCell). However, its value can also not be updated once set unless you have a mutable reference to the OnceCell.
+
+`OnceCell` provides the following methods:    
+`get`: obtain a reference to the inner value
+`set`: set the inner value if it is unset (returns a Result)
+`get_or_init`: return the inner value, initializing it if needed
+`get_mut`: provide a mutable reference to the inner value, only available if you have a mutable reference to the cell itself.
+The corresponding Sync version of `OnceCell<T>` is `OnceLock<T>`.
 
 #### `Mutex<T>`
 

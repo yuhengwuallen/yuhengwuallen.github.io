@@ -84,3 +84,20 @@ Solution:
    2. Branch target buffer: in the IF stage caches the branch target address, but we also need to fetch the next sequential instruction. The prediction bit in IF/ID selects which “next” instruction will be loaded into IF/ID at the next clock edge.
 
 ## Memory Hierarchy
+
+What makes the memory hierarchy effective is the _principle of locality_. 
+
+- Temporal Locality (locality in time)
+  - if a memory location is referenced then it will tend to be referenced again soon
+  - how: keep the most recently accessed data items closer to the processor
+- Spatial Locality (locality in space)
+  - if a memory location is referenced, the locations with nearby addresses will tend to be referenced soon
+  - how: move blocks consisting of _contiguous words_ closer to the processor
+
+{{< figure src="/post/computer-architecture/cache_levels.png" caption="Intel Core i7 Cache Hierarchy" >}}
+
+
+### Direct-mapped Caches
+
+
+
