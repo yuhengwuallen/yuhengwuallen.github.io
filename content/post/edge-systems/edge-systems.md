@@ -177,7 +177,7 @@ Following the _who2com_ paper, it firstly leverages a three-stage handshake comm
 #### When to communicate
 Until now, agents learns how to group its supporters and  requesters. But in a more bandwidth efficient communication, if a agent has enough information locally, there is no need to request for further information from others. To take this into consideration, the agent should learn when it needs to request information from its group. To this end, _when2com_ adopts a method similar to self-attention in which it uses the correlation between the _key_ and _query_ to determine if a agent needs more information. $m_{i,j} = \phi(u_i, k_i)$, $m_{i,i} \approx 1$ represents that the agent has sufficient information and doesn't need to communicate. Note that the _key_ here is different in size from the _query_ which is shared between agents. The shareable _key_ is processed in an asymmetric message method to reduce the dimension of _query_ so as to reduce the demand for bandwidth.
 
-Based on the cross attention $m_{i,j}$ above, _when2com_ derives the _matching matrix_ $M$: $M = \sigma(m_{i,j})$ where $\sigma$ is a row-wise softmax. To construct communication groups, it prunes the less important connections with an _activation function_ which zeros out the elements less than $\delta$, in paper $\delta = \frac{1}{\# agents}$
+Based on the cross attention $m_{i,j}$ above, _when2com_ derives the _matching matrix_ $M$: $M = \sigma(m_{i,j})$ where $\sigma$ is a row-wise softmax. To construct communication groups, it prunes the less important connections with an _activation function_ which zeros out the elements less than $\delta$, in paper $\delta = \frac{1}{num\ of\ agents}$
 
 #### How to fuse information
 
@@ -188,4 +188,8 @@ The agents fuse the information from the supporter by weighting each feature bas
 With this learning representation feature, the downstream tasks can target to any kinds of tasks which shares the cooperative property.
 
 ### Evaluation
-[tbd]
+
+The primary objective for evaluation is to validate the effectiveness of _Group Communication_ and _When to communicate_. To achieve this, the evaluation is designed around two tasks _collaborative semantic segmentation_ and _multi-agent 3D classification_. I will only cover the former one here. The task can be described as follows: Given the RGB images, depth maps, record pose of each agent, the goal is to produce an accurate 2D semantic segmentation mask for every agent involved. During the evaluation, the authors considers three variants of collaboration: (1) single-requester multi-supporter (2) multi-requester multi-supporter (3) multi-requester multi-partial-supporter. (1) under the consumption that if an agent is degraded, then its original, non-degraded information will be presented in one of the supporting agents. (2) multi agents can suffer from degradation and follow the setting of 1 (3) remove the assumption in 1 and the degraded agent should select the most informative views of variable degree of relevance. The key results are as follows: 
+
+{{< figure src="/post/edge-systems/when2com_result1.png" caption="" >}}
+{{< figure src="/post/edge-systems/when2com_result2.png" caption="" >}}
