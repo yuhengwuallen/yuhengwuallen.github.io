@@ -184,3 +184,34 @@ The special case mentioned in the rust Cell doc is `Clone`. The `Clone` method i
 ##### Core primitive - UnsafeCell
 
 The primitive underlying all interior mutability is the `UnsafeCell` which internally wraps the data and opts-out the immutability guarantees for &T. Note that it's !Sync but is Send iff T is Send. More detailed description refers to: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html#impl-Sync-for-UnsafeCell%3CT%3E.
+
+##### Why is Arc usually paired with Mutex/RwLock?
+
+The reason is that, even Arc provides a thread-safety shared ownership to the inner value, it doesn't bring the thread-safety to its inner value. So when changing by different threads, the inner value should be guaranteed to have the exclusive access and that's why we pair it with Mutex which ensures the exclusive access.
+
+### Memory Ordering
+
+TODO.
+
+### Linearizability
+
+The concept of `Linearizability` is quite confusing at the beginning. One good example I found is https://stackoverflow.com/questions/9762101/what-is-linearizability. First of all, the goal of linearizability is to verify the correctness(or safety) of the concurrent program.
+There can be multiply threads running in the system where their function calls are interleaving. To reason about the correctness, we can first obtain a history trace of the interleaved function calls (we can H). Then we can reorder the sequence of excutions following the rule:
+
+> If one method call m1 precedes another m2, then the m1 must precedes m2 in the reordered sequence
+> but the interleaved calls can be reordered ambiguously.
+> The reordered sequence have two properties: (1) respect the program order (2) preserve the real-time behavior
+
+If and only if we can find at least one legal sequence is correct which means it meets the conditions of sequential specifications, then the H is **linearizable** and the corresponding legal reordered sequence is the **linearization**.
+
+In this sense, if every concurrent history has a linearization, the concurrent program meets the condition of the linearizability.
+
+However, for large concurrent program, it's not practical to figure out all the histories. The usual way to prove the linearizability of the concurrent object implementation is to identify for each method a _linearization point_ where the method takes "effect". Normally, the "point" where the method takes effect, for lock-based is the critical section and for lock-free is the atomic operations where it changes the state of the concurrent data structure.
+
+#### Other useful materials
+
+[RustBelt: Logical Foundations for the Future of Safe Systems Programming 2019](https://www.youtube.com/watch?v=1GjSfyijaxo&ab_channel=JaneStreet)
+
+### Modeling relaxed behaviors and ordering
+
+TODO
