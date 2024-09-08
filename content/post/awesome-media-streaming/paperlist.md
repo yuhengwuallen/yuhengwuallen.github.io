@@ -27,15 +27,18 @@ ShowShareButtons: false
 * [Veritas: Answering Causal Queries from Video Streaming Traces](https://dl.acm.org/doi/pdf/10.1145/3603269.3604828) [SIGCOMM 2023]
 * [Sammy: smoothing video traffic to be a friendly internet neighbor](https://dl.acm.org/doi/pdf/10.1145/3603269.3604839) [SIGCOMM 2023]
 * [Genet: Automatic Curriculum Generation for Learning Adaptation in Networking](https://dl.acm.org/doi/pdf/10.1145/3544216.3544243) [SIGCOMM 2022]
+* [ARTEMIS: Adaptive Bitrate Ladder Optimization for Live Video Streaming](https://www.usenix.org/system/files/nsdi24-tashtarian.pdf) [NSDI 2024]
 
 ### High-Volume Video
 * [Dragonfly: Higher Perceptual Quality For Continuous 360° Video
 Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [Ekho: Synchronizing cloud gaming media across multiple endpoints](https://dl.acm.org/doi/pdf/10.1145/3603269.3604826) [SIGCOMM 2023]
 * [ZGaming: Zero-Latency 3D Cloud Gaming by Image Prediction](https://dl.acm.org/doi/pdf/10.1145/3603269.3604819) [SIGCOMM 2023]
+* [Pudica: Toward Near-Zero Queuing Delay in Congestion Control for Cloud Gaming](https://www.usenix.org/system/files/nsdi24-wang-shibo.pdf) [NSDI 2024]
+* [AUGUR: Practical Mobile Multipath Transport Service for Low Tail Latency in Real-Time Streaming](https://www.usenix.org/system/files/nsdi24-zhou-yuhan.pdf) [NSDI 2024]
+* [YuZu: Neural-Enhanced Volumetric Video Streaming](https://www.usenix.org/system/files/nsdi22-paper-zhang.pdf) [NSDI 2022]
 
-
-### Other
+### Classic
 * [Converge: QoE-driven Multipath Video Conferencing over WebRTC](https://dl.acm.org/doi/pdf/10.1145/3603269.3604822) [SIGCOMM 2023]
 * [CellFusion: Multipath Vehicle-to-Cloud Video Streaming with Network Coding in the Wild](https://dl.acm.org/doi/pdf/10.1145/3603269.3604832) [SIGCOMM 2023]
 * [XRON: A Hybrid Elastic Cloud Overlay Network for Video Conferencing at Planetary Scale](https://dl.acm.org/doi/pdf/10.1145/3603269.3604845) [SIGCOMM 2023]
@@ -44,13 +47,29 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [GSO-simulcast: global stream orchestration in simulcast video conferencing systems](https://dl.acm.org/doi/pdf/10.1145/3544216.3544228) [SIGCOMM 2022]
 * [XLINK: QoE-driven multi-path QUIC transport in large-scale video services](https://dl.acm.org/doi/pdf/10.1145/3452296.3472893) [SIGCOMM 2021]
 * [Neural-Enhanced Live Streaming: Improving Live Video Ingest via Online Learning](https://dl.acm.org/doi/proceedings/10.1145/3387514) [SIGCOMM 2020]
-  
+* [Hairpin: Rethinking Packet Loss Recovery in Edge-based Interactive Video Streaming](https://www.usenix.org/system/files/nsdi24-meng.pdf) [NSDI 2024]
+* [Tambur: Efficient loss recovery for videoconferencing via streaming codes](https://www.usenix.org/system/files/nsdi23-rudow.pdf) [NSDI 2023]
+* [Enabling High Quality Real-Time Communications with Adaptive Frame-Rate](https://www.usenix.org/system/files/nsdi23-meng.pdf) [NSDI 2023]
 
+### Interesting & New Topic
+* [GRACE: Loss-Resilient Real-Time Video through Neural Codecs](https://www.usenix.org/system/files/nsdi24-cheng.pdf) [NSDI 2024]
+* [LiFteR: Unleash Learned Codecs in Video Streaming with Loose Frame Referencing](https://www.usenix.org/system/files/nsdi24-chen-bo.pdf) [NSDI 2024]
+* [Gemino: Practical and Robust Neural Compression for Video Conferencing](https://www.usenix.org/system/files/nsdi24-sivaraman.pdf) [NSDI 2024]
+* [Dashlet: Taming Swipe Uncertainty for Robust Short Video Streaming](https://www.usenix.org/system/files/nsdi23-li-zhuqi.pdf) [NSDI 2023]
+* [Swift: Adaptive Video Streaming with Layered Neural Codecs](https://www.usenix.org/system/files/nsdi22-paper-dasari.pdf) [NSDI 2022]
+  
 ## Machine-Oriented
 * [AdaInf: Data Drift Adaptive Scheduling for Accurate and SLO-guaranteed Multiple-Model Inference Serving at Edge Servers](https://dl.acm.org/doi/pdf/10.1145/3603269.3604830) [SIGCOMM 2023]
 * [PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale](https://dl.acm.org/doi/pdf/10.1145/3603269.3604825) [SIGCOMM 2023]
 * [Reducto: On-Camera Filtering for Resource-Efficient Real-Time Video Analytics](https://dl.acm.org/doi/pdf/10.1145/3387514.3405874) [SIGCOMM 2020]
 * [Server-Driven Video Streaming for Deep Learning Inference](https://dl.acm.org/doi/pdf/10.1145/3387514.3405887) [SIGCOMM 2020]
+* [MadEye: Boosting Live Video Analytics Accuracy with Adaptive Camera Configurations](https://www.usenix.org/system/files/nsdi24-wong.pdf) [NSDI 2024]
+* [Vulcan: Automatic Query Planning for Live ML Analytics](https://www.usenix.org/system/files/nsdi24-zhang-yiwen.pdf) [NSDI 2024]
+* [RECL: Responsive Resource-Efficient Continuous Learning for Video Analytics](https://www.usenix.org/system/files/nsdi23-khani.pdf) [NSDI 2023]
+* [Boggart: Towards General-Purpose Acceleration of Retrospective Video Analytics](https://www.usenix.org/system/files/nsdi23-agarwal-neil.pdf) [NSDI 2023]
+* [Gemel: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge](https://www.usenix.org/system/files/nsdi23-padmanabhan.pdf) [NSDI 2023]
+* [Ekya: Continuous Learning of Video Analytics Models on Edge Compute Servers](https://www.usenix.org/system/files/nsdi22-paper-bhardwaj.pdf) [NSDI 2022]
+* [SwarmMap: Scaling Up Real-time Collaborative Visual SLAM at the Edge](https://www.usenix.org/system/files/nsdi22-paper-xu_jingao.pdf) [NSDI 2022]
 
 ## General Purpose Framework
 * [NetLLM: Adapting Large Language Models for Networking](https://dl.acm.org/doi/pdf/10.1145/3651890.3672268) [SIGCOMM 2024]
