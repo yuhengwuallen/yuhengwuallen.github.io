@@ -28,6 +28,7 @@ ShowShareButtons: false
 * [Sammy: smoothing video traffic to be a friendly internet neighbor](https://dl.acm.org/doi/pdf/10.1145/3603269.3604839) [SIGCOMM 2023]
 * [Genet: Automatic Curriculum Generation for Learning Adaptation in Networking](https://dl.acm.org/doi/pdf/10.1145/3544216.3544243) [SIGCOMM 2022]
 * [ARTEMIS: Adaptive Bitrate Ladder Optimization for Live Video Streaming](https://www.usenix.org/system/files/nsdi24-tashtarian.pdf) [NSDI 2024]
+* [Learning in situ: a randomized experiment in video streaming](https://www.usenix.org/system/files/nsdi20-paper-yan.pdf) [NSDI 2020]
 
 ### High-Volume Video
 * [Dragonfly: Higher Perceptual Quality For Continuous 360° Video
@@ -50,6 +51,7 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [Hairpin: Rethinking Packet Loss Recovery in Edge-based Interactive Video Streaming](https://www.usenix.org/system/files/nsdi24-meng.pdf) [NSDI 2024]
 * [Tambur: Efficient loss recovery for videoconferencing via streaming codes](https://www.usenix.org/system/files/nsdi23-rudow.pdf) [NSDI 2023]
 * [Enabling High Quality Real-Time Communications with Adaptive Frame-Rate](https://www.usenix.org/system/files/nsdi23-meng.pdf) [NSDI 2023]
+* [SENSEI: Aligning Video Streaming Quality with Dynamic User Sensitivity](https://www.usenix.org/system/files/nsdi21-zhang.pdf) [NSDI 2021]
 
 ### Interesting & New Topic
 * [GRACE: Loss-Resilient Real-Time Video through Neural Codecs](https://www.usenix.org/system/files/nsdi24-cheng.pdf) [NSDI 2024]
@@ -76,6 +78,11 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [An Architecture For Edge Networking Services](https://dl.acm.org/doi/pdf/10.1145/3651890.3672261) [SIGCOMM 2024]
 * [Exoshuffle: An Extensible Shuffle Architecture](https://dl.acm.org/doi/pdf/10.1145/3603269.3604848) [SIGCOMM 2023]
 * [Network planning with deep reinforcement learning](https://dl.acm.org/doi/pdf/10.1145/3452296.3472902) [SIGCOMM 2021]
+* [Mistify: Automating DNN Model Porting for On-Device Inference at the Edge](https://www.usenix.org/system/files/nsdi21-guo.pdf) [NSDI 2021]
+* [Elastic Resource Sharing for Distributed Deep Learning](https://www.usenix.org/system/files/nsdi21-hwang.pdf) [NSDI 2021]
+* [Batchy: Batch-scheduling Data Flow Graphs with Service-level Objectives](https://www.usenix.org/system/files/nsdi20-paper-levai.pdf) [NSDI 2020]
 
 ## Better Storage, Better Streaming
 * [Darwin: Flexible Learning-based CDN Caching](https://dl.acm.org/doi/pdf/10.1145/3603269.3604863) [SIGCOMM 2023]
+* [When Cloud Storage Meets RDMA](https://www.usenix.org/system/files/nsdi21-gao.pdf) [NSDI 2021]
+* [Learning Relaxed Belady for Content Distribution Network Caching](https://www.usenix.org/system/files/nsdi20-paper-song.pdf) [NSDI 2020]
