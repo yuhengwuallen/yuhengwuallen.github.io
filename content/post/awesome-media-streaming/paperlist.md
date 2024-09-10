@@ -1,5 +1,5 @@
 ---
-title: "Awesome Media Delivery & Storage"
+title: "Awesome Media Delivery"
 date: 2024-09-08
 # weight: 1
 # aliases: ["/first"]
@@ -10,7 +10,7 @@ tocopen: true
 draft: true
 math: true
 comments: false
-description: "paper list of media streaming"
+description: "A curated list of awesome papers on Media Delivery and related research/industry-driven resources."
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: false
@@ -56,6 +56,7 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [Energy-Efficient 360-Degree Video Streaming on Multicore-Based Mobile Devices](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10228863) [INFOCOM 2023]
 * [OmniSense: Towards Edge-Assisted Online Analytics for 360-Degree Videos](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10229105) [INFOCOM 2023]
 * [Collaborative Streaming and Super Resolution Adaptation for Mobile Immersive Videos](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10228906) [INFOCOM 2023]
+* [Robust 360&#x00B0; Video Streaming via Non-Linear Sampling](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488700) [INFOCOM 2021]
 
 ### Classic
 * [Converge: QoE-driven Multipath Video Conferencing over WebRTC](https://dl.acm.org/doi/pdf/10.1145/3603269.3604822) [SIGCOMM 2023]
@@ -84,6 +85,8 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [LSync: A Universal Event-synchronizing Solution for Live Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796933) [INFOCOM 2022]
 * [VSiM: Improving QoE Fairness for Video Streaming in Mobile Environments](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796725) [INFOCOM 2022]
 * [On Uploading Behavior and Optimizations of a Mobile Live Streaming Service](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796824) [INFOCOM 2022]
+* [AMIS: Edge Computing Based Adaptive Mobile Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488426) [INFOCOM 2021]
+* [Popularity-Aware 360-Degree Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488856) [INFOCOM 2021]
 
 
 ### Interesting || New Topic
@@ -104,6 +107,8 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [AdaptSLAM: Edge-Assisted Adaptive SLAM with Resource Constraints via Uncertainty Minimization](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10229009) [INFOCOM 2023]
 * [VR Viewport Pose Model for Quantifying and Exploiting Frame Correlations](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796904) [INFOCOM 2022]
 * [ComAI: Enabling Lightweight, Collaborative Intelligence by Retrofitting Vision DNNs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796769) [INFOCOM 2022]
+* [A Universal Transcoding and Transmission Method for Livecast with Networked Multi-Agent Reinforcement Learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488868) [INFOCOM 2021]
+* [Motion-Prediction-based Wireless Scheduling for Multi-User Panoramic Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488771) [INFOCOM 2021]
   
 ## Machine-Oriented
 * [AdaInf: Data Drift Adaptive Scheduling for Accurate and SLO-guaranteed Multiple-Model Inference Serving at Edge Servers](https://dl.acm.org/doi/pdf/10.1145/3603269.3604830) [SIGCOMM 2023]
@@ -133,6 +138,13 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [Batch Adaptative Streaming for Video Analytics](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796853) [INFOCOM 2022]
 * [DNN-Driven Compressive Offloading for Edge-Assisted Semantic Video Segmentation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796657) [INFOCOM 2022]
 * [Learning-based Multi-Drone Network Edge Orchestration for Video Analytics](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796706) [INFOCOM 2022]
+* [EdgeDuet: Tiling Small Object Detection for Edge Assisted Autonomous Mobile Vision](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488843) [INFOCOM 2021]
+* [SODA: Similar 3D Object Detection Accelerator at Network Edge for Autonomous Driving](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488833) [INFOCOM 2021]
+* [Enabling Edge-Cloud Video Analytics for Robotics Applications](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488801) [INFOCOM 2021]
+* [AutoML for Video Analytics with Edge Computing](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488704) [INFOCOM 2021]
+* [VideoLoc: Video-based Indoor Localization with Text Information](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488739) [INFOCOM 2021]
+* [Edge-assisted Online On-device Object Detection for Real-time Video Analytics](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488741) [INFOCOM 2021]
+* [Towards Video Streaming Analysis and Sharing for Multi-Device Interaction with Lightweight DNNs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488846) [INFOCOM 2021]
 
 ## General Purpose Framework || Scheduling
 * [NetLLM: Adapting Large Language Models for Networking](https://dl.acm.org/doi/pdf/10.1145/3651890.3672268) [SIGCOMM 2024]
