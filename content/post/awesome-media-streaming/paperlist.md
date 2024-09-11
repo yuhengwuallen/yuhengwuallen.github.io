@@ -57,6 +57,10 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [OmniSense: Towards Edge-Assisted Online Analytics for 360-Degree Videos](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10229105) [INFOCOM 2023]
 * [Collaborative Streaming and Super Resolution Adaptation for Mobile Immersive Videos](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10228906) [INFOCOM 2023]
 * [Robust 360&#x00B0; Video Streaming via Non-Linear Sampling](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488700) [INFOCOM 2021]
+* [Popularity-Aware 360-Degree Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488856) [INFOCOM 2021]
+* [ARISE: High-Capacity AR Offloading Inference Serving via Proactive Scheduling](https://dl.acm.org/doi/pdf/10.1145/3643832.3661894) [MOBISYS 2024]
+* [Theia: Gaze-driven and Perception-aware Volumetric Content Delivery for Mixed Reality Headsets](https://dl.acm.org/doi/pdf/10.1145/3643832.3661858) [MOBISYS 2024]
+* [OmniLive: Super-Resolution Enhanced 360° Video Live Streaming for Mobile Devices](https://doi.org/10.1145/3581791.3596851) [MOBISYS 2023]
 
 ### Classic
 * [Converge: QoE-driven Multipath Video Conferencing over WebRTC](https://dl.acm.org/doi/pdf/10.1145/3603269.3604822) [SIGCOMM 2023]
@@ -86,7 +90,6 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [VSiM: Improving QoE Fairness for Video Streaming in Mobile Environments](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796725) [INFOCOM 2022]
 * [On Uploading Behavior and Optimizations of a Mobile Live Streaming Service](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796824) [INFOCOM 2022]
 * [AMIS: Edge Computing Based Adaptive Mobile Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488426) [INFOCOM 2021]
-* [Popularity-Aware 360-Degree Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488856) [INFOCOM 2021]
 
 
 ### Interesting || New Topic
@@ -109,6 +112,8 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [ComAI: Enabling Lightweight, Collaborative Intelligence by Retrofitting Vision DNNs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9796769) [INFOCOM 2022]
 * [A Universal Transcoding and Transmission Method for Livecast with Networked Multi-Agent Reinforcement Learning](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488868) [INFOCOM 2021]
 * [Motion-Prediction-based Wireless Scheduling for Multi-User Panoramic Video Streaming](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488771) [INFOCOM 2021]
+* [NeRFHub: A Context-Aware NeRF Serving Framework for Mobile Immersive Applications](https://dl.acm.org/doi/pdf/10.1145/3643832.3661879) [MOBISYS 2024]
+* [Practical Optical Camera Communication Behind Unseen and Complex Backgrounds](https://dl.acm.org/doi/pdf/10.1145/3643832.3661866) [MOBISYS 2024]
   
 ## Machine-Oriented
 * [AdaInf: Data Drift Adaptive Scheduling for Accurate and SLO-guaranteed Multiple-Model Inference Serving at Edge Servers](https://dl.acm.org/doi/pdf/10.1145/3603269.3604830) [SIGCOMM 2023]
@@ -145,6 +150,8 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [VideoLoc: Video-based Indoor Localization with Text Information](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488739) [INFOCOM 2021]
 * [Edge-assisted Online On-device Object Detection for Real-time Video Analytics](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488741) [INFOCOM 2021]
 * [Towards Video Streaming Analysis and Sharing for Multi-Device Interaction with Lightweight DNNs](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9488846) [INFOCOM 2021]
+* [AutoCast: Scalable Infrastructure-less Cooperative Perception for Distributed Collaborative Driving](https://dl.acm.org/doi/abs/10.1145/3498361.3538925) [MOBISYS 2022]
+* [DeepMix: mobility-aware, lightweight, and hybrid 3D object detection for headsets](https://dl.acm.org/doi/10.1145/3498361.3538945) [MOBISYS 2022]
 
 ## General Purpose Framework || Scheduling
 * [NetLLM: Adapting Large Language Models for Networking](https://dl.acm.org/doi/pdf/10.1145/3651890.3672268) [SIGCOMM 2024]
@@ -158,6 +165,10 @@ Playback](https://dl.acm.org/doi/pdf/10.1145/3603269.3604876) [SIGCOMM 2023]
 * [Emma: Elastic Multi-Resource Management for Realtime Stream Processing](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10621313) [INFOCOM 2024]
 * [DeepScheduler: Enabling Flow-Aware Scheduling in Time-Sensitive Networking](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10228875) [INFOCOM 2023]
 * [Joint Task Offloading and Resource Allocation in Heterogeneous Edge Environments](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10229015) [INFOCOM 2023]
+* [CoActo: CoActive Neural Network Inference Offloading with Fine-grained and Concurrent Execution](https://dl.acm.org/doi/pdf/10.1145/3643832.3661885) [MOBISYS 2024]
+* [LimitNet: Progressive, Content-Aware Image Offloading for Extremely Weak Devices & Networks](https://dl.acm.org/doi/pdf/10.1145/3643832.3661856) [MOBISYS 2024]
+* [TinyNet: a Lightweight, Modular, and Unified Network Architecture for the Internet of Things](https://dl.acm.org/doi/10.1145/3498361.3538919) [MOBISYS 2022]
+* [CoDL: efficient CPU-GPU co-execution for deep learning inference on mobile devices](https://dl.acm.org/doi/10.1145/3498361.3538932) [MOBISYS 2022]
 
 ## Better Storage, Better Streaming
 * [Darwin: Flexible Learning-based CDN Caching](https://dl.acm.org/doi/pdf/10.1145/3603269.3604863) [SIGCOMM 2023]
